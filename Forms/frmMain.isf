@@ -1,0 +1,137 @@
+; -- Created with ISN Form Studio 2 for ISN AutoIt Studio -- ;
+#include <StaticConstants.au3>
+#include <GUIConstantsEx.au3>
+#include <WindowsConstants.au3>
+#Include <GuiButton.au3>
+#include <EditConstants.au3>
+
+$frmMain = GUICreate("frmMain",914,624,-1,-1,-1,-1)
+GUISetOnEvent($GUI_EVENT_CLOSE, "_exit", $frmMain)
+$btnCapture = GUICtrlCreateButton("Capture",783,29,100,30,-1,-1)
+GUICtrlSetOnEvent(-1,"_Capture")
+$btnStop = GUICtrlCreateButton("Print",783,92,100,30,-1,-1)
+GUICtrlSetOnEvent(-1,"GenerateCode")
+$editText = GUICtrlCreateEdit("",10,10,760,585,$ES_MULTILINE,-1)
+
+
+
+#cs
+[gui]
+Handle_deklaration=default
+Handle_deklaration_const=false
+title=frmMain
+breite=914
+hoehe=624
+style=-1
+exstyle=-1
+bgcolour=0xF0F0F0
+bgimage=none
+handle=$frmMain
+parent=
+code=
+codebeforegui=
+xpos=-1
+ypos=-1
+center_gui=true
+title_textmode=normal
+isf_include_once=false
+only_controls_in_isf=false
+const_modus=default
+gui_code_in_function=false
+gui_code_in_function_name=
+gui_event_close=_exit
+gui_event_minimize=
+gui_event_restore=
+gui_event_maximize=
+gui_event_mousemove=
+gui_event_primarydown=
+gui_event_primaryup=
+gui_event_secoundarydown=
+gui_event_secoundaryup=
+gui_event_resized=
+gui_event_dropped=
+[0x00081CEE]
+handle=409
+locked=0
+resize=
+code=
+type=button
+x=783
+y=29
+width=100
+height=30
+text=Capture
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=$btnCapture
+func=_Capture
+bgimage=
+order=0
+tabpage=-1
+iconindex=
+textmode=text
+[0x00011CF0]
+handle=410
+locked=0
+resize=
+code=
+type=button
+x=783
+y=92
+width=100
+height=30
+text=Print
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=
+exstyle=
+textcolour=0x000000
+bgcolour=
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=$btnStop
+func=GenerateCode
+bgimage=
+order=3
+tabpage=-1
+iconindex=
+textmode=text
+[0x00011CF2]
+handle=411
+locked=0
+resize=
+code=
+type=edit
+x=10
+y=10
+width=760
+height=585
+text=
+tooltip=
+state=$GUI_SHOW+$GUI_ENABLE
+style=$ES_MULTILINE
+exstyle=
+textcolour=0x000000
+bgcolour=
+font=MS Sans Serif
+fontsize=8
+fontstyle=400
+fontattribute=0
+id=$editText
+func=
+bgimage=
+order=4
+tabpage=-1
+iconindex=
+textmode=text
+#ce
